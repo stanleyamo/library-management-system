@@ -12,9 +12,9 @@ This system allows students and librarians to manage books, borrowings, returns,
 - Track overdue fines
 - Role-based dashboards for students and librarians
 
-## Technologies Used
+## Tech Stack
 
-Backend: Django, Django REST Framework, SimpleJWT, PostgreSQL / SQLite  
+Backend: Django, Django REST Framework, SimpleJWT, SQLite  
 Frontend: React, TailwindCSS, Vite, Axios
 
 ## License
