@@ -17,7 +17,6 @@ const Home = () => {
     const [showCTA, setShowCTA] = useState(false);
 
     useEffect(() => {
-        // Redirect authenticated users to their dashboards
         if (isAuthenticated) {
             if (user?.role === 'librarian') {
                 navigate('/dashboard', { replace: true });
@@ -35,7 +34,6 @@ const Home = () => {
     }, [isAuthenticated, user, navigate]);
 
     useEffect(() => {
-        // Show CTA after 3 seconds for non-authenticated users
         if (!isAuthenticated) {
             const timer = setTimeout(() => {
                 setShowCTA(true);
@@ -48,12 +46,12 @@ const Home = () => {
     const loadBooks = async () => {
         setLoading(true);
         try {
-            const result = await bookService.getAllBooks({ availableOnly: true });
+            const result = await bookService.getFeaturedBooks();
             if (result.success) {
-                setBooks(result.books.slice(0, 6)); // Show only 6 on home
+                setBooks(result.books);
             }
         } catch (error) {
-            console.error('Error loading books:', error);
+            console.error('Error loading featured books:', error);
         } finally {
             setLoading(false);
         }
@@ -88,11 +86,10 @@ const Home = () => {
         }
     };
 
-    // If authenticated, show dashboard content (though they should be redirected)
+
     if (isAuthenticated && user) {
         return (
             <div className="min-h-screen">
-                {/* Hero Section for Authenticated Users */}
                 <div className="bg-gradient-to-r from-blue-600 to-blue-800 text-white">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
                         <h1 className="text-4xl font-bold mb-2">
@@ -107,7 +104,7 @@ const Home = () => {
                     </div>
                 </div>
 
-                {/* Stats Section (for authenticated students) */}
+
                 {user.role === 'student' && stats && (
                     <div className="bg-white border-b border-gray-200">
                         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
@@ -131,7 +128,7 @@ const Home = () => {
                     </div>
                 )}
 
-                {/* Featured Books */}
+
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                     <div className="flex justify-between items-center mb-8">
                         <h2 className="text-2xl font-bold text-gray-900">Featured Books</h2>
@@ -160,10 +157,9 @@ const Home = () => {
         );
     }
 
-    // Landing page for non-authenticated users
+
     return (
         <div className="min-h-screen">
-            {/* Hero Section */}
             <div className="bg-gradient-to-r from-blue-600 to-blue-800 text-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
                     <h1 className="text-4xl font-bold mb-4">A Smart Library Management System</h1>
@@ -188,7 +184,7 @@ const Home = () => {
                 </div>
             </div>
 
-            {/* Call to Action - Shows on scroll */}
+
             {showCTA && (
                 <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-50 animate-fade-in">
                     <div className="bg-white rounded-lg shadow-xl p-6 border-2 border-blue-500 max-w-md relative">
@@ -226,7 +222,7 @@ const Home = () => {
             <div className="bg-gray-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
 
-                    {/* Header */}
+
                     <div className="flex items-center justify-between mb-10">
                         <div>
                             <h2 className="text-2xl font-bold text-gray-900">
@@ -245,7 +241,6 @@ const Home = () => {
                         </Link>
                     </div>
 
-                    {/* Content */}
                     {loading ? (
                         <div className="flex justify-center py-16">
                             <LoadingSpinner size="lg" />

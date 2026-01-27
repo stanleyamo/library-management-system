@@ -57,7 +57,7 @@ const BookDetail = () => {
                 borrowDetails.extendedFee
             );
             if (result.success) {
-                // Update book availability
+
                 setBook({
                     ...book,
                     availableCopies: book.availableCopies - 1
@@ -197,7 +197,7 @@ const BookDetail = () => {
                 </div>
             </div>
 
-            {/* Borrow Confirmation Modal */}
+
             <BorrowConfirmationModal
                 isOpen={showBorrowModal}
                 onClose={() => setShowBorrowModal(false)}

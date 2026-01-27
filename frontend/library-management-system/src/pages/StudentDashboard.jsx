@@ -70,7 +70,6 @@ const StudentDashboard = () => {
     return (
         <ProtectedRoute>
             <div className="min-h-screen bg-gray-50">
-                {/* Welcome Header */}
                 <div className="bg-gradient-to-r from-blue-600 to-blue-800 text-white">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                         <h1 className="text-4xl font-bold mb-2">
@@ -84,7 +83,7 @@ const StudentDashboard = () => {
 
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
 
-                    {/* Stats Cards */}
+
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                         <div className="bg-white  rounded-lg shadow-md p-6">
                             <div className="flex items-center">
@@ -129,7 +128,7 @@ const StudentDashboard = () => {
                         </div>
                     </div>
 
-                    {/* Active Books */}
+
                     <div className="bg-white  rounded-lg shadow-md p-6 mb-8">
                         <div className="flex justify-between items-center mb-4">
                             <h2 className="text-xl font-semibold text-gray-900 ">Currently Borrowed Books</h2>
@@ -176,7 +175,7 @@ const StudentDashboard = () => {
                         )}
                     </div>
 
-                    {/* Pending Fines */}
+
                     {fines.length > 0 && (
                         <div className="bg-white  rounded-lg shadow-md p-6">
                             <div className="flex justify-between items-center mb-4">

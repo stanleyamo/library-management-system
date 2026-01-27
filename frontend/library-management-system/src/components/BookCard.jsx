@@ -6,7 +6,7 @@ const BookCard = ({ book }) => {
     return (
         <div className="group relative bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden">
 
-            {/* Cover */}
+
             <div className="relative h-48 bg-gray-100 overflow-hidden">
                 {book.coverImage ? (
                     <img
@@ -23,7 +23,7 @@ const BookCard = ({ book }) => {
                     </div>
                 )}
 
-                {/* Availability Badge */}
+
                 <span
                     className={`absolute top-2 right-2 px-2 py-1 rounded-full text-[10px] font-semibold text-white shadow ${isAvailable ? "bg-green-500" : "bg-red-500"
                         }`}
@@ -32,7 +32,7 @@ const BookCard = ({ book }) => {
                 </span>
             </div>
 
-            {/* Content */}
+
             <div className="p-4 space-y-2">
                 <h3 className="text-sm font-semibold text-gray-900 line-clamp-2">
                     {book.title}
