@@ -21,7 +21,7 @@ const Footer = () => {
                         <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
                         <ul className="space-y-2 text-sm text-gray-400">
                             <li>Email: library@university.edu</li>
-                            <li>Phone: (555) 123-4567</li>
+                            <li>Phone: (+233)500631685</li>
                             <li>Hours: Mon-Fri 9AM-5PM</li>
                         </ul>
                     </div>
