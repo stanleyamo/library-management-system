@@ -279,7 +279,7 @@ const AddBook = () => {
                                 </button>
                                 <button
                                     type="button"
-                                    onClick={() => navigate('/books')}
+                                    onClick={() => navigate('/')}
                                     className="btn-secondary"
                                 >
                                     Cancel

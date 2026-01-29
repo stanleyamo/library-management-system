@@ -25,7 +25,7 @@ const mockBooks = [
         totalCopies: 4,
         availableCopies: 2,
         description: 'A Handbook of Agile Software Craftsmanship.',
-        coverImage: 'https://kodexolabs.com/wp-content/uploads/2024/01/Clean-Code-Principles-BLOG-THUMBNAIL_01.webp',
+        coverImage: 'https://images-na.ssl-images-amazon.com/images/I/81Rnac2Fq+L.jpg',
         callNumber: 'QA76.76.D47 M37 2008',
         featured: true
     },
@@ -85,7 +85,7 @@ const mockBooks = [
         totalCopies: 5,
         availableCopies: 3,
         description: 'A top-down approach to computer networking.',
-        coverImage: 'https://images.ctfassets.net/aq13lwl6616q/7Bat1BAPAcw756SvvThlS6/a190213cfff69ddfd6d084e58d783f6d/introduction_to_computer_networking.png?w=700&h=394&q=50&fm=png&bg=transparent',
+        coverImage: 'https://i.ebayimg.com/images/g/4ygAAOSweARZcNVm/s-l500.jpg',
         callNumber: 'TK5105.5 .T46 2021',
         featured: false
     },
